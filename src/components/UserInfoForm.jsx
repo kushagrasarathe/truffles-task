@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 
-export default function UserInfoForm() {
+export default function UserInfoForm(props) {
+  const { setStep } = props;
   return (
     <div className=" text-grey mx-3 mt-8 mb-4 pr-10">
       <h1 className=" text-2xl font-semibold text-black">User Information</h1>
@@ -39,20 +40,19 @@ export default function UserInfoForm() {
       <div className="w-full my-5 col-span-1">
         <label htmlFor="">Mobile Number</label>
         <div className=" w-full flex">
-            <select
+          <select
             className="my-1 w-28 bg-white border border-gray-300 px-2 py-1 rounded-l-md"
             name=""
             id=""
-            >
+          >
             <option value="+1">US</option>
             <option value="+91">IN</option>
             <option value="+63">CA</option>
-            </select>
-            <input
+          </select>
+          <input
             className="my-1 w-full bg-white border border-l-0 border-gray-300 px-2 py-1 rounded-r-md"
             type="number"
-            />
-
+          />
         </div>
       </div>
 
@@ -119,12 +119,14 @@ export default function UserInfoForm() {
 
       <div className="w-full my-5 flex justify-between items-center mt-1 md:mt-16">
         <button
+        disabled={true}
           className=" bg-white border py-2 px-3 rounded-md w-auto active:bg-gray- transition ease-in-out active:scale-105 200"
           type="button"
         >
           Back
         </button>
         <button
+          onClick={() => setStep(2)}
           className=" transition ease-in-out active:scale-105  bg-purple border py-2 px-3 rounded-md text-white active:bg-violet-600"
           type="button"
         >

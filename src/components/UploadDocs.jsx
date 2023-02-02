@@ -1,16 +1,14 @@
-export default function BusinessInfoForm(props) {
+export default function UploadDocs(props) {
   const { setStep } = props;
   return (
     <>
       <div className=" text-grey mx-3 mt-8 mb-4 pr-10">
-        <h1 className=" text-2xl font-semibold text-black">
-          Business Information
-        </h1>
+        <h1 className=" text-2xl font-semibold text-black">Upload Documents</h1>
         <span className=" mt-2">
-          Use a permanent address where you can receive mail.
+          {/* Use a permanent address where you can receive mail. */}
         </span>
 
-        <div className=" my-3 w-full">
+        {/* <div className=" my-3 w-full">
           <div className="md:col-span-1 col-span-3 md:my-2 my-2 w-full flex flex-col items-start justify-center">
             <label htmlFor="">Account ID</label>
             <input
@@ -119,24 +117,24 @@ export default function BusinessInfoForm(props) {
             className="my-1 w-full bg-white border border-gray-300 px-2 py-1 rounded-md"
             type="date"
           />
-        </div>
+        </div> */}
 
         <div className="w-full my-5 flex justify-between items-center mt-1 md:mt-16">
-          <button
-            onClick={() => setStep(2)}
-            className=" bg-white border py-2 px-3 rounded-md w-auto active:bg-gray- transition ease-in-out active:scale-105 200"
-            type="button"
-          >
-            Back
-          </button>
-          <button
-            onClick={() => setStep(4)}
-            className=" transition ease-in-out active:scale-105  bg-purple border py-2 px-3 rounded-md text-white active:bg-violet-600"
-            type="button"
-          >
-            Next
-          </button>
-        </div>
+            <button
+              onClick={() => setStep(4)}
+              className=" bg-white border py-2 px-3 rounded-md w-auto active:bg-gray- transition ease-in-out active:scale-105 200"
+              type="button"
+            >
+              Back
+            </button>
+            <button
+              onClick={() => setStep(6)}
+              className=" transition ease-in-out active:scale-105  bg-purple border py-2 px-3 rounded-md text-white active:bg-violet-600"
+              type="button"
+            >
+              Next
+            </button>
+          </div>
       </div>
     </>
   );
