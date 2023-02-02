@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className=" py-4 px-6 flex justify-between items-center border-b-2">
         <div>
-          <Image src={logo} />
+          <Image alt="logo" src={logo} />
         </div>
         <div>
           <span>
@@ -28,13 +28,13 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className=" w-full grid md:grid-cols-12">
-        <div className=" sm:col-span-12 md:col-span-3">
+      <div className=" w-full grid grid-cols-12">
+        <div className=" col-span-12 md:col-span-5 lg:col-span-3">
           <StepBar grid />
         </div>
-        <div className=" ml-10 sm:col-span-12 md:col-span-9 ">
-          <UserInfoForm />
-          {/* <BusinessInfoForm /> */}
+        <div className=" ml-10 col-span-12 md:col-span-7 lg:col-span-9">
+          {/* <UserInfoForm /> */}
+          <BusinessInfoForm />
         </div>
       </div>
     </>

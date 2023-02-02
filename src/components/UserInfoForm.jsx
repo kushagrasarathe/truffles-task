@@ -3,9 +3,9 @@ import Datepicker from "react-tailwindcss-datepicker";
 
 export default function UserInfoForm() {
   return (
-    <div className="  mx-3 mt-8 mb-4 pr-10">
-      <h1 className=" text-2xl font-semibold">User Information</h1>
-      <span>Please enter your details</span>
+    <div className=" text-grey mx-3 mt-8 mb-4 pr-10">
+      <h1 className=" text-2xl font-semibold text-black">User Information</h1>
+      <span className=" mt-8">Please enter your details</span>
 
       <div className=" my-3 w-full grid grid-cols-3">
         <div className=" md:col-span-1 col-span-3 md:my-2 my-2 w-full md:w-11/12 md:mr-2 flex flex-col items-start justify-center">
@@ -38,10 +38,22 @@ export default function UserInfoForm() {
 
       <div className="w-full my-5 col-span-1">
         <label htmlFor="">Mobile Number</label>
-        <input
-          className="my-1 w-full bg-white border border-gray-300 px-2 py-1 rounded-md"
-          type="text"
-        />
+        <div className=" w-full flex">
+            <select
+            className="my-1 w-28 bg-white border border-gray-300 px-2 py-1 rounded-l-md"
+            name=""
+            id=""
+            >
+            <option value="+1">US</option>
+            <option value="+91">IN</option>
+            <option value="+63">CA</option>
+            </select>
+            <input
+            className="my-1 w-full bg-white border border-l-0 border-gray-300 px-2 py-1 rounded-r-md"
+            type="number"
+            />
+
+        </div>
       </div>
 
       <div className="w-full my-5">
@@ -84,7 +96,7 @@ export default function UserInfoForm() {
           <label htmlFor="">Postal Code</label>
           <input
             className="my-1 w-full bg-white border border-gray-300 px-2 py-1 rounded-md"
-            type="text"
+            type="number"
           />
         </div>
       </div>
@@ -105,7 +117,7 @@ export default function UserInfoForm() {
         />
       </div>
 
-      <div className="w-full my-5 flex justify-between items-center">
+      <div className="w-full my-5 flex justify-between items-center mt-1 md:mt-16">
         <button
           className=" bg-white border py-2 px-3 rounded-md w-auto active:bg-gray- transition ease-in-out active:scale-105 200"
           type="button"
