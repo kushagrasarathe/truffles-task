@@ -1,9 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,110 +10,154 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <h1 className=" text-center text-2xl m-3 "> Truffles</h1>
+
+      <div className=" flex justify-start items-center  md:w-3/12">
+        <div className=" my-5 mx-auto px-4">
+          {/* trying */}
+          <div className="grid grid-cols-3 gap-0 ">
+            <div className="mr-auto ">
+              <div className="w-10 h-10 bg-white border-2 border-[#7445F8] mx-auto rounded-full text-lg text-black flex items-center">
+                <span className=" bg-[#7445F8] w-3 h-3 rounded-full mx-auto"></span>
+              </div>
+            </div>
+            <div className=" font-semibold text-[#7445F8] col-span-2 md:ml-[-15px] pl-8 md:pl-4 my-auto text-start text-base md:text-lg w-64 ">
+              USER INFORMATION
+            </div>
+            <div className="  col-span-3 ml-[19px] w-[2px] mt-[0px] align-center items-center align-middle content-center flex">
+              <div className="w-full bg-purple-500  rounded items-center align-middle align-center flex-1">
+                <div
+                  style={{ width: "100%" }}
+                  class=" w-0  h-16 bg-[#7445F8] text-black rounded-none "
+                ></div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          {/*  */}
+          <div className="grid grid-cols-3 gap-0 ">
+            {/*  */}
+            <div className="mr-auto">
+              <div className="w-10 h-10  bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+                <span className="text-black text-center w-full">2</span>
+              </div>
+            </div>
+            {/*  */}
+            <div className="  col-span-2 md:ml-[-15px] pl-8 md:pl-4 my-auto text-start text-base md:text-lg w-64  ">
+              ADMIN AND OPERATIONS
+            </div>
+            {/*  */}
+            <div className=" col-span-3 ml-5 w-[2px] mt-[-px] align-center items-center align-middle content-center flex">
+              <div className="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+                <div
+                  style={{ width: "0%" }}
+                  class=" w-0  h-16  text-black rounded-none "
+                ></div>
+              </div>
+            </div>
           </div>
+
+          <div className="grid grid-cols-3 gap-0 ">
+            {/*  */}
+            <div className="mr-auto">
+              <div className="w-10 h-10  bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+                <span className="text-black text-center w-full">2</span>
+              </div>
+            </div>
+            {/*  */}
+            <div className="   col-span-2 md:ml-[-15px] pl-8 md:pl-4 my-auto text-start text-base md:text-lg w-64   ">
+              BUSINESS INFORMATION
+            </div>
+            {/*  */}
+            <div className=" col-span-3 ml-5 w-[2px] mt-[-px] align-center items-center align-middle content-center flex">
+              <div className="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+                <div
+                  style={{ width: "0%" }}
+                  class=" w-0  h-16  text-black rounded-none "
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-0 ">
+            {/*  */}
+            <div className="mr-auto">
+              <div className="w-10 h-10  bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+                <span className="text-black text-center w-full">2</span>
+              </div>
+            </div>
+            {/*  */}
+            <div className="  col-span-2 md:ml-[-15px] pl-8 md:pl-4 my-auto text-start text-base md:text-lg w-64 ">
+              UPLOAD DOCUMENTS
+            </div>
+          </div>
+
+          {/* end */}
+
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </div>
     </>
-  )
+  );
 }
+
+{/* <div className="flex flex-col justify-center items-start">
+  <div className="flex justify-center items-center">
+    <div className="flex-1">
+      <div className="w-10 h-10 bg-white border-2 border-purple-500 mx-auto rounded-full text-lg text-black flex items-center">
+        <span className=" bg-purple-500 w-3 h-3 rounded-full mx-auto"></span>
+      </div>
+    </div>
+  </div>
+
+  <div className=" w-[2px] align-center items-center align-middle content-center flex">
+    <div className="w-full bg-purple-500  rounded items-center align-middle align-center flex-1">
+      <div
+        style={{ width: "100%" }}
+        class=" w-0  h-16 bg-purple-500  text-black rounded-none "
+      ></div>
+    </div>
+  </div>
+
+  <div className="flex justify-center items-center flec">
+    <div className="flex-1">
+      <div className="w-10 h-10 bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+        <span className="text-black text-center w-full">2</span>
+      </div>
+    </div>
+    <div className=" col-span-2 md:ml-[-15px] my-auto text-center text-lg w-48 ">
+    Invitation received
+  </div>
+  </div>
+
+  <div className=" w-[2px] align-center items-center align-middle content-center flex">
+    <div className="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+      <div
+        style={{ width: "0%" }}
+        class=" w-0  h-16  text-black rounded-none "
+      ></div>
+    </div>
+  </div>
+
+  <div className="flex-1">
+    <div className="w-10 h-10 bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+      <span className="text-black text-center w-full">3</span>
+    </div>
+  </div>
+
+  <div className=" w-[2px] align-center items-center align-middle content-center flex">
+    <div className="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+      <div
+        style={{ width: "0%" }}
+        class=" w-0  h-16  text-black rounded-none "
+      ></div>
+    </div>
+  </div>
+
+  <div className="flex-1">
+    <div className="w-10 h-10 bg-white border-2 border-gray-300 mx-auto rounded-full text-lg text-black flex items-center">
+      <span className="text-black text-center w-full">4</span>
+    </div>
+  </div>
+
+  <div className="flex-1"></div>
+</div> */}
