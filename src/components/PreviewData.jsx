@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function PreviewData(props) {
@@ -13,13 +14,15 @@ export default function PreviewData(props) {
         >
           Back
         </button>
+        <Link href={'/dashboard'}>
         <button
-          onClick={() => alert("Application Successfully Submitted!!!")}
+          // onClick={() => alert("Application Successfully Submitted!!!")}
           className=" transition ease-in-out active:scale-105  bg-purple border py-2 px-3 rounded-md text-white active:bg-violet-600"
           type="button"
-        >
-          Submit
+          >
+          Take me to Dashboard
         </button>
+          </Link>
       </div>
     </div>
   );

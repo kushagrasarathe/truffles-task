@@ -25,21 +25,23 @@ export default function Dashboard({ children }) {
     <>
       <DashboardLayout>
         {hideKyc && (
-          <div className=" relative mt-2 md:mb-10 mb-12 py-3 px-6 flex-wrap text-white rounded-md bg-violet-500 col-span-3 flex justify-start items-center ">
-            <Image alt="i-icon" src={iIcon} />
-            <p className=" px-4">
-              Plese complete the KYC
-              <br />
-              Please follow the instructions in the email to complete account
-              verification. Make sure to check your promotions/spam as well.
-            </p>
+          <div className=" grid grid-cols-6 relative mt-2 md:mb-10 mb-12 py-3 px-6  text-white rounded-md bg-violet-500 col-span-3">
+            <div className="md:col-span-5 col-span-full flex justify-start items-start md:items-center ">
+              <Image className="" alt="i-icon" src={iIcon} />
+              <p className=" px-4 text-justify ">
+                Plese complete the KYC
+                <br />
+                Please follow the instructions in the email to complete account
+                verification. Make sure to check your promotions/spam as well.
+              </p>
+            </div>
             <div
               onClick={() => {
                 setHideKyc(false);
               }}
-              className=" ml-auto cursor-pointer"
+              className=" md:relative absolute right-0 p-2 ml-auto cursor-pointer col-span-1 my-auto"
             >
-              <Image className=" md:relative absolute top-0" alt="cross" src={cross} />
+                <Image alt="cross" src={cross} />
             </div>
           </div>
         )}
@@ -89,7 +91,6 @@ export default function Dashboard({ children }) {
           <div className=" bg-red-30 md:row-span-3 col-span-full md:col-span-2 row-span-full">
             <Graph />
           </div>
-          
         </div>
       </DashboardLayout>
     </>

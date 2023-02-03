@@ -10,7 +10,7 @@ export default function Calendar() {
         <div className="md:p-8 p-5  bg-white rounded-xl">
           <div className="px-4 flex items-center justify-between">
             <span
-              tabindex="0"
+              tabIndex="0"
               className="focus:outline-none  text-base font-bold  text-gray-800"
             >
               October 2020
@@ -26,11 +26,11 @@ export default function Calendar() {
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <polyline points="15 6 9 12 15 18" />
@@ -46,11 +46,11 @@ export default function Calendar() {
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <polyline points="9 6 15 12 9 18" />
@@ -166,7 +166,7 @@ export default function Calendar() {
                       <div className="flex items-center justify-center w-full rounded-full cursor-pointer">
                         <a
                           role="link"
-                          tabindex="0"
+                          tabIndex="0"
                           className="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full"
                         >
                           8
