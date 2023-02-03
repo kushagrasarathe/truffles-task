@@ -1,68 +1,96 @@
-import Image from "next/image";
-import React from "react";
-
-// header icons
-import logo from "../../src/assets/logo.png";
-import user from "../../src/assets/user.png";
-import bell from "../../src/assets/bell.png";
-
-// sidebar icons
-import dash from "../../src/assets/dash.png";
-import invoice from "../../src/assets/invoice.png";
-import proforma from "../../src/assets/proforma.png";
-import swap from "../../src/assets/swap.png";
-import transfer from "../../src/assets/transfer.png";
-import contacts from "../../src/assets/contacts.png";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import DashboardLayout from "@/src/components/DashboardLayout";
+import Image from "next/image";
+import React, { useState } from "react";
+// import { Calendar } from "react-calendar";
+// import 'react-calendar/dist/Calendar.css';
+// dashboard icons
+import iIcon from "../../src/assets/i-icon.png";
+import cross from "../../src/assets/cross.png";
+import up from "../../src/assets/up.png";
+import down from "../../src/assets/down.png";
+import wallet1 from "../../src/assets/wallet1.png";
+import wallet2 from "../../src/assets/wallet2.png";
+import Graph from "@/src/components/Graph";
+import Calendar from "@/src/components/Calendar";
 
-const sidebarOptions = [
-  {
-    title: "Dashboard",
-    img: dash,
-    isActive: true,
-    path: "/dashboard",
-  },
-  {
-    title: "Invoice",
-    img: invoice,
-    isActive: false,
-    path: "/dashboard/invoice",
-  },
-  {
-    title: "Proforma",
-    img: proforma,
-    isActive: false,
-    path: "/dashboard/proforma",
-  },
-  {
-    title: "Swap",
-    img: swap,
-    isActive: false,
-    path: "/dashboard/swap",
-  },
-  {
-    title: "Transfer",
-    img: transfer,
-    isActive: false,
-    path: "/dashboard/transfer",
-  },
-  {
-    title: "Contacts",
-    img: contacts,
-    isActive: false,
-    path: "/dashboard/contacts",
-  },
-];
+// calendar
+// import "@natscale/react-calendar/dist/main.css";
+// import { Calendar } from "@natscale/react-calendar";
+// import styles from "../../styles/Customs.module.css";
 
 export default function Dashboard({ children }) {
-  const router = useRouter();
+  const [hideKyc, setHideKyc] = useState(true);
 
   return (
     <>
       <DashboardLayout>
-        <h1>Dashboard Here</h1>
+        {hideKyc && (
+          <div className=" relative mt-2 md:mb-10 mb-12 py-3 px-6 flex-wrap text-white rounded-md bg-violet-500 col-span-3 flex justify-start items-center ">
+            <Image alt="i-icon" src={iIcon} />
+            <p className=" px-4">
+              Plese complete the KYC
+              <br />
+              Please follow the instructions in the email to complete account
+              verification. Make sure to check your promotions/spam as well.
+            </p>
+            <div
+              onClick={() => {
+                setHideKyc(false);
+              }}
+              className=" ml-auto cursor-pointer"
+            >
+              <Image className=" md:relative absolute top-0" alt="cross" src={cross} />
+            </div>
+          </div>
+        )}
+        <div className=" grid grid-cols-3 gap-10 grid-rows-6">
+          <div className=" md:row-span-2 grid grid-cols-2 md:col-span-2 col-span-full gap-8">
+            <div className=" bg-white p-5 rounded-2xl shadow-md col-span-full md:col-span-1 flex justify-between items-center">
+              <div>
+                <span className=" leading-8 text-grey">Fiat Balance</span>
+                <h3 className=" leading-8 text-2xl font-semibold">$00,000</h3>
+              </div>
+              <div>
+                <Image alt="wallet1" src={wallet1} />
+              </div>
+            </div>
+            <div className=" bg-white p-5 rounded-2xl shadow-md col-span-full md:col-span-1 flex justify-between items-center">
+              <div>
+                <span className=" leading-8 text-grey">Crypto Balance</span>
+                <h3 className=" leading-8 text-2xl font-semibold">$00,000</h3>
+              </div>
+              <div>
+                <Image alt="wallet2" src={wallet2} />
+              </div>
+            </div>
+            <div className=" bg-white p-5 rounded-2xl shadow-md col-span-full md:col-span-1 flex justify-between items-center">
+              <div>
+                <span className=" leading-8 text-grey">Receivable</span>
+                <h3 className=" leading-8 text-2xl font-semibold">$00,000</h3>
+              </div>
+              <div>
+                <Image alt="down" src={down} />
+              </div>
+            </div>
+            <div className=" bg-white p-5 rounded-2xl shadow-md col-span-full md:col-span-1 flex justify-between items-center">
+              <div>
+                <span className=" leading-8 text-grey">Payables</span>
+                <h3 className=" leading-8 text-2xl font-semibold">$00,000</h3>
+              </div>
+              <div>
+                <Image alt="up" src={up} />
+              </div>
+            </div>
+          </div>
+          <div className=" ml-auto w-full md:w-auto md:col-span-1 col-span-full md:row-span-6 bg-red-00">
+            {/* <span>Sample Calendar</span> */}
+            <Calendar />
+          </div>
+          <div className=" bg-red-30 md:row-span-3 col-span-full md:col-span-2 row-span-full">
+            <Graph />
+          </div>
+          
+        </div>
       </DashboardLayout>
     </>
   );

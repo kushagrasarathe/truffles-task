@@ -15,7 +15,6 @@ import transfer from "../assets/transfer.png";
 import contacts from "../assets/contacts.png";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import dayjs from "dayjs";
 
 const sidebarOptions = [
   {
@@ -114,7 +113,7 @@ export default function DashboardLayout({ children }) {
             );
           })}
         </div>
-        <div className=" h-screen py-4 px-6 md:col-span-10 col-span-full ">
+        <div className="py-4 px-6 md:col-span-10 col-span-full ">
           {children}
         </div>
       </div>
