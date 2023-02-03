@@ -74,7 +74,7 @@ export default function DashboardLayout({ children }) {
     <>
       {/* header */}
       <div className="  py-4 px-6 bg-lightGrey border-b grid grid-cols-12">
-        <div className=" md:col-span-2 col-span-6 md:ml-0 ml-auto ">
+        <div className=" md:col-span-2 col-span-6 md:ml-0 ml-5 my-auto md:w-48 w-9/12 ">
           <div>
             <Image alt="logo" src={logo} />
           </div>
@@ -120,7 +120,7 @@ export default function DashboardLayout({ children }) {
                     } md:py-4 md:px-2 py-4 px-2 rounded-md`}
                   >
                     <Image className=" ml-2" alt="dash" src={option.img} />
-                    <span className=" md:visible invisible px-3">
+                    <span className=" md:block hidden px-3">
                       {option.title}
                     </span>
                   </div>
